@@ -46,5 +46,12 @@ CREATE TABLE reports (
     title VARCHAR(150),
     description TEXT,
     submitted_by VARCHAR(100),
+    CREATE TABLE reports (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(150),
+    description TEXT,
+    submitted_by VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

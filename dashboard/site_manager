@@ -1,0 +1,17 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['role']) || $_SESSION['role'] != 'site_manager'){
+    header("Location: ../login.php");
+    exit();
+}
+?>
+
+<h1>Welcome Site Manager</h1>
+<ul>
+<li>Daily Reports</li>
+<li>Site Attendance</li>
+<li>Material Usage</li>
+</ul>
+
+<a href="../logout.php">Logout</a>

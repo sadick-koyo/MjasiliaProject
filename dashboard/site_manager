@@ -7,11 +7,63 @@ if(!isset($_SESSION['role']) || $_SESSION['role'] != 'site_manager'){
 }
 ?>
 
-<h1>Welcome Site Manager</h1>
-<ul>
-<li>Daily Reports</li>
-<li>Site Attendance</li>
-<li>Material Usage</li>
-</ul>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Site Manager Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
 
-<a href="../logout.php">Logout</a>
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Site Manager</h2>
+
+        <a href="#">Dashboard</a>
+        <a href="#">Daily Reports</a>
+        <a href="#">Workers Attendance</a>
+        <a href="#">Materials</a>
+        <a href="#">Site Safety</a>
+        <a href="../logout.php">Logout</a>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <div class="header">
+            <h1>Welcome Site Manager</h1>
+            <a href="#" class="btn">+ New Report</a>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Workers Today</h3>
+                <p>52</p>
+            </div>
+
+            <div class="card">
+                <h3>Reports Sent</h3>
+                <p>14</p>
+            </div>
+
+            <div class="card">
+                <h3>Materials Used</h3>
+                <p>37</p>
+            </div>
+
+            <div class="card">
+                <h3>Safety Checks</h3>
+                <p>09</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

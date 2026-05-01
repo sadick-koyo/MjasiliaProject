@@ -32,7 +32,7 @@ if(!isset($_SESSION['role']) || $_SESSION['role'] != 'admin'){
     <div class="sidebar">
         <h2>EMS Admin</h2>
 <a href="admin.php">Dashboard</a>
-
+<a href="add_user.php">Add User</a>
 <a href="../modules/construction.php">Construction</a>
 
 <a href="../modules/mining.php">Mining</a>

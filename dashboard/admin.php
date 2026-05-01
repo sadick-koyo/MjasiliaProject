@@ -37,7 +37,8 @@ $total_reports = $conn->query("SELECT * FROM reports")->num_rows;
         <a href="admin.php">Dashboard</a>
         <a href="manage_users.php">Manage Users</a>
         <a href="add_user.php">Add User</a>
-
+<a href="add_report.php">Add Report</a>
+<a href="view_reports.php">View Reports</a>
         <hr>
 
         <a href="../modules/construction.php">Construction</a>

@@ -1,6 +1,17 @@
 <?php
 session_start();
 
+include "../config.php";
+
+// Total Users
+$total_users = $conn->query("SELECT * FROM users")->num_rows;
+
+// Total Projects
+$total_projects = $conn->query("SELECT * FROM projects")->num_rows;
+
+// Total Reports
+$total_reports = $conn->query("SELECT * FROM reports")->num_rows;
+
 if(!isset($_SESSION['role']) || $_SESSION['role'] != 'admin'){
     header("Location: ../login.php");
     exit();

@@ -94,5 +94,36 @@ body{
 }
 
 .btn:hover{
+    /* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .main {
+        padding: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+        overflow-x: auto;
+        display: block;
+    }
+}
     background:#0284c7;
 }

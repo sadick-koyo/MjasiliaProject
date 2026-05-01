@@ -31,13 +31,21 @@ if(!isset($_SESSION['role']) || $_SESSION['role'] != 'admin'){
     <!-- Sidebar -->
     <div class="sidebar">
         <h2>EMS Admin</h2>
+<a href="admin.php">Dashboard</a>
 
-        <a href="#">Dashboard</a>
-        <a href="#">Manage Users</a>
-        <a href="#">Projects</a>
-        <a href="#">Reports</a>
-        <a href="#">Settings</a>
-        <a href="../logout.php">Logout</a>
+<a href="../modules/construction.php">Construction</a>
+
+<a href="../modules/mining.php">Mining</a>
+
+<a href="../modules/metal.php">Metal Works</a>
+
+<a href="../modules/technical.php">Technical Services</a>
+
+<a href="#">Manage Users</a>
+
+<a href="#">Reports</a>
+
+<a href="../logout.php">Logout</a>
     </div>
 
     <!-- Main -->

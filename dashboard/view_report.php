@@ -15,42 +15,61 @@ $result = $conn->query("SELECT * FROM reports ORDER BY id DESC");
 <head>
 <title>View Reports</title>
 <link rel="stylesheet" href="../assets/css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
 <div class="container">
 
-<div class="sidebar">
-<h2>Reports</h2>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Reports</h2>
 
-<a href="add_report.php">Add Report</a>
-<a href="view_reports.php">View Reports</a>
-<a href="../logout.php">Logout</a>
-</div>
+        <a href="admin.php">Dashboard</a>
+        <a href="add_report.php">Add Report</a>
+        <a href="view_reports.php">View Reports</a>
 
-<div class="main">
+        <hr>
 
-<h1>All Reports</h1>
+        <a href="../modules/construction.php">Construction</a>
+        <a href="../modules/mining.php">Mining</a>
+        <a href="../modules/metal.php">Metal Works</a>
+        <a href="../modules/technical.php">Technical</a>
 
-<?php while($row = $result->fetch_assoc()){ ?>
+        <hr>
 
-<div class="card">
+        <a href="../logout.php">Logout</a>
+    </div>
 
-<h3><?php echo $row['title']; ?></h3>
-<p><?php echo $row['description']; ?></p>
+    <!-- MAIN -->
+    <div class="main">
 
-<small>
-By: <?php echo $row['submitted_by']; ?> |
-Date: <?php echo $row['created_at']; ?>
-</small>
+        <div class="header">
+            <h1>All Reports</h1>
+            <a href="add_report.php" class="btn">+ Add Report</a>
+        </div>
 
-</div>
+        <?php while($row = $result->fetch_assoc()){ ?>
 
-<br>
+        <div class="card" style="margin-bottom:15px;">
 
-<?php } ?>
+            <h3><?php echo $row['title']; ?></h3>
 
-</div>
+            <p style="line-height:1.6;">
+                <?php echo $row['description']; ?>
+            </p>
+
+            <div style="margin-top:10px; font-size:13px; color:#94a3b8;">
+                By: <?php echo $row['submitted_by']; ?> |
+                Date: <?php echo $row['created_at']; ?>
+            </div>
+
+        </div>
+
+        <?php } ?>
+
+    </div>
 
 </div>
 

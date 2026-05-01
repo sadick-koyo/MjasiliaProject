@@ -1,4 +1,6 @@
-
+/* =========================
+   GLOBAL RESET
+========================= */
 *{
     margin:0;
     padding:0;
@@ -8,15 +10,20 @@
 
 body{
     background:#0f172a;
-    color:white;
+    color:#fff;
 }
 
+/* =========================
+   LAYOUT
+========================= */
 .container{
     display:flex;
     min-height:100vh;
 }
 
-/* Sidebar */
+/* =========================
+   SIDEBAR
+========================= */
 .sidebar{
     width:250px;
     background:#111827;
@@ -24,16 +31,16 @@ body{
 }
 
 .sidebar h2{
-    margin-bottom:30px;
     color:#38bdf8;
+    margin-bottom:20px;
 }
 
 .sidebar a{
     display:block;
-    color:white;
+    color:#fff;
     text-decoration:none;
     padding:12px;
-    margin-bottom:10px;
+    margin-bottom:8px;
     border-radius:8px;
     transition:0.3s;
 }
@@ -42,88 +49,120 @@ body{
     background:#1e293b;
 }
 
-/* Main */
+/* =========================
+   MAIN CONTENT
+========================= */
 .main{
     flex:1;
-    padding:30px;
+    padding:25px;
 }
 
+/* HEADER */
 .header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 .header h1{
     color:#38bdf8;
 }
 
-/* Cards */
+/* =========================
+   BUTTON
+========================= */
+.btn{
+    background:#38bdf8;
+    color:#fff;
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0284c7;
+}
+
+/* =========================
+   CARDS
+========================= */
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
     gap:20px;
 }
 
 .card{
     background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
 }
 
 .card h3{
-    margin-bottom:10px;
     color:#22c55e;
+    margin-bottom:10px;
 }
 
 .card p{
-    font-size:28px;
+    font-size:22px;
     font-weight:bold;
 }
 
-/* Button */
-.btn{
-    background:#38bdf8;
-    color:white;
-    padding:10px 18px;
-    border:none;
+/* =========================
+   FORMS
+========================= */
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
     border-radius:8px;
-    text-decoration:none;
+    border:none;
 }
 
-.btn:hover{
-    /* RESPONSIVE DESIGN */
-@media screen and (max-width: 768px) {
-
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        text-align: center;
-    }
-
-    .sidebar a {
-        display: inline-block;
-        margin: 5px;
-    }
-
-    .main {
-        padding: 15px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    table {
-        font-size: 12px;
-        overflow-x: auto;
-        display: block;
-    }
+/* =========================
+   TABLE
+========================= */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#1e293b;
 }
-    background:#0284c7;
+
+table th, table td{
+    padding:10px;
+    border:1px solid #334155;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width:768px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        text-align:center;
+    }
+
+    .sidebar a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        font-size:12px;
+        display:block;
+        overflow-x:auto;
+    }
 }
